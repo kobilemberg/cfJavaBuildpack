@@ -2,11 +2,8 @@ name: JMXConnetionPool
 version: 1.0
 enabled: true
 jmx:
-  - object_name: spring.application:type=DataSource,name=dataSource
+  - object_name: app.monitor:type=MonitorExposer,name=MonitorExposer
     metrics:
-      - attributes: NumActive, NumIdle, MaxIdle, MaxActive
+      - attributes: ClientCount, ClinetsByEhub, EventhubCount, Latency98AfterDBSave, Latency98AfterSerialization, Latency98AfterValidation, MsgReceived, MsgReceivedRate, MsgSaveRate, MsgSaved
         type: simple
-  - object_name: java.lang:type=OperatingSystem
-    metrics:
-      - attributes: OpenFileDescriptorCount, SystemLoadAverage, ProcessCpuLoad, CommittedVirtualMemorySize, FreePhysicalMemorySize, AvailableProcessors, MaxFileDescriptorCount
-        type: simple
+
