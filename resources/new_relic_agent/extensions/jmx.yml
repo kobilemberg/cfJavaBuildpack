@@ -4,6 +4,6 @@ enabled: true
 jmx:
   - object_name: app.monitor:type=MonitorExposer,name=MonitorExposer
     metrics:
-      - attributes: MessageInCount, MessageOutCount
+      - attributes: MessageInCount, MessageOutCount, MessageFailedOutCount, MeanRateIn, MeanRateOut, LastIntervalInCount, LastIntervalOutCount
         type: simple
 
