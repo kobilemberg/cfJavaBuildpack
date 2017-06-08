@@ -2,7 +2,7 @@ name: JMXConnetionPool
 version: 1.0
 enabled: true
 jmx:
-  - object_name: app.monitor:type=MonitorExposer,name=MonitorExposer
+  - object_name: app.monitor:type=MonitorExposer
     metrics:
       - attributes: MessageInCount, MessageOutCount, MessageFailedOutCount, MeanRateIn, MeanRateOut, LastIntervalInCount, LastIntervalOutCount
         type: simple
